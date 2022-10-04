@@ -88,14 +88,6 @@ section h2 {
     box-shadow: 1.5px 1.5px 5px #333;
 }
 
-article img {
-    float: left;
-    border: 4px solid #00A0C6;
-    margin-right: 20px;
-    padding: 3px;
-    outline: 4px solid #a02571;
-    width: 25%;
-} 
 
 
 /* ELEMENTI NEL MAIN - ARTICLE */
