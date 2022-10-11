@@ -40,15 +40,13 @@ document.getElementById('iniziale').innerHTML = 'Valore iniziale:' + iniziale;
 // Addizione e incremento 
 {
  let valore1 = iniziale + 15; 
- let incremento = valore1 + 1; 
- document.getElementById('valore1').innerHTML += `${valore1}, ${incremento}`; 
+ document.getElementById('valore1').innerHTML += `${valore1}, ${++valore1}`; 
  }
  
 //Sottrazione e decremento
 {
  let valore2 = iniziale -10; 
- let decremento= valore2 -1; 
- document.getElementById('valore2').innerHTML += `${valore2}, ${decremento}`; 
+ document.getElementById('valore2').innerHTML += `${valore2}, ${--valore2}`; 
 }
 
 //Moltiplicazione 
