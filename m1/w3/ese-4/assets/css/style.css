@@ -1,0 +1,23 @@
+body {
+
+    height:100%;
+    background: linear-gradient(-45deg, #e07802, #f33101, #e07802);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter
+
+}
+
+h1 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 2em;
+}
+
+h3 {
+
+    font-size: 14px;
+}

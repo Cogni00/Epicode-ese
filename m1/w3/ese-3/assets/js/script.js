@@ -59,5 +59,8 @@ btn.addEventListener('click', function() {
   document.getElementById('totale').innerHTML += somma;
 });
 
+   
+
+
 
 
