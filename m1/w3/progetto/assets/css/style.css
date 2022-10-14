@@ -1,0 +1,166 @@
+#video {
+    position: fixed;
+    right: 0;
+    bottom: 0; 
+    min-width: 100%;
+    min-height: 100%;
+}
+.calculator {
+    
+    background: linear-gradient( rgb(201, 183, 165) 30%, rgb(156, 114, 54), rgb(53, 47, 39));
+    opacity: 0.8;
+    width: 230px;
+    height: 345px;
+    margin:0 auto;
+    box-shadow: 1px 1px 5px rgb(53, 47, 39);
+    position:fixed; 
+    top: 20vh;
+    left: 80vh;
+
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: fixed;
+    top: 5vh;
+    left: 65vh;
+    color: rgb(53, 47, 39);
+}
+.section {
+    margin-left: 2px;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+
+.tasto {
+    background-color: aliceblue;
+    font-size: 22px;
+    border: none;
+    margin: 4px 2px;
+    height: 40px;
+    width: 46px;
+    color: rgb(53, 47, 39); 
+    opacity: 0.8;
+}
+ 
+
+.zero {
+    height: 40px; 
+    width: 99px;
+
+}
+.display {
+    background: none;
+    color: rgb(53, 47, 39);
+    font-size: 24pt;
+    border: rgb(53, 47, 39) solid 2px;
+    margin: 4px 2px;
+    width: 204px;
+    height: 40px;   
+    text-align: right;         
+}
+.uguale {
+    width: 208px;
+}
+
+#toggle-btn {
+    display: inline-block;
+    width:50px;
+    height: 31px;
+    background-color: rgb(156, 114, 54);
+    background-image: url('background@2x.png');
+    background-size: 100%;
+    border-radius: 24px;
+    position: relative;
+    top:5px;
+    transition: all ease-in-out .4s; 
+    cursor: pointer;
+
+}
+
+#toggle-btn::before {
+    position: absolute;
+    width:27px;
+    height: 27px;
+    background-color: white;
+    border-radius: 50%;
+    left:2px;
+    top:2px;
+    content: '';
+    transition: all ease-in-out .4s;
+    z-index: 10;
+}
+
+#toggle-btn.toggle-btn--dark {
+    background-color: #13447E;
+}
+
+#toggle-btn.toggle-btn--dark::before {
+    left: 20px;
+}
+
+/*DARK MODE*/
+
+.dark-mode #stelle {
+    position: fixed;
+    right: 0;
+    bottom: 0; 
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.dark-mode #video {
+    display: none;
+}
+
+.dark-mode h1 {
+    color: aliceblue;
+}
+
+.dark-mode .calculator {
+    background: linear-gradient( rgb(14, 6, 48) 60%,   rgb(166, 123, 188), rgb(229, 133, 60),rgb(34, 16, 77) );
+    opacity: 0.8;
+    width: 230px;
+    height: 345px;
+    margin:0 auto;
+    box-shadow: 1px 1px 5px cornflowerblue;
+    position:fixed; 
+    top: 20vh;
+    left: 80vh;
+
+}
+.dark-mode .tasto {
+    
+        background-color: aliceblue;
+        font-size: 22px;
+        border: none;
+        margin: 4px 2px;
+        height: 40px;
+        width: 46px;
+        color: #175c97; 
+        opacity: 0.8;
+}
+
+.dark-mode .display {
+    
+        background: none;
+        color: #175c97;
+        font-size: 24pt;
+        border: #175c97 solid 2px;
+        margin: 4px 2px;
+        width: 204px;
+        height: 40px;   
+        text-align: right;         
+    
+}
+    
+.dark-mode .zero {
+    height: 40px; 
+    width: 99px;
+
+}
+ .dark-mode .uguale {
+    width: 208px;
+}

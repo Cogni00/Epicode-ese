@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La calcolatrice di Ilaria</title>
+    <meta name="description" content="calcolatrice in JS">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+
+<body class="dark-mode">
+    <video autoplay muted loop id="video"> <source src="assets/video/Energia Eolica - 6558.mp4" type="video/mp4"> </video>
+    <video autoplay muted loop id="stelle"> <source src="assets/video/Stelle - 67251.mp4" type="video/mp4"> </video>
+    <h1>La mia prima calcolatrice</h1>
+    <div id="dark" class="calculator">
+        <div class="section">
+            <input type="text" name="display" id="schermo" readonly="readonly" class="display" />
+        </div>
+        <div class="section">
+            <div id="toggle-btn" class="toggle-btn--dark"></div>
+            <input type="submit" id="7" value="7" onclick="n(this.id)" class="tasto" />
+            <input type="submit" id="8" value="8" onclick="n(this.id)" class="tasto" />
+            <input type="submit" id="9" value="9" onclick="n(this.id)" class="tasto" />
+        </div>
+        <div class="section">
+            <input type="submit" id="+" value="+" onclick="n(this.id)" class="tasto" />
+            <input type="submit" id="4" value="4" onclick="n(this.id)" class="tasto" />
+            <input type="submit" id="5" value="5" onclick="n(this.id)" class="tasto" />
+            <input type="submit" id="6" value="6" onclick="n(this.id)" class="tasto" />
+        </div>
+        <div class="section">
+            <input type="submit" id="-" value="-" onclick="n(this.id)" class="tasto" />
+            <input type="submit" id="1" value="1" onclick="n(this.id)" class="tasto" />
+            <input type="submit" id="2" value="2" onclick="n(this.id)" class="tasto" />
+            <input type="submit" id="3" value="3" onclick="n(this.id)" class="tasto" />
+        </div>
+        <div class="section">
+            <input type="submit" id="x" value="x" onclick="n(this.id)" class="tasto" />
+            <input type="submit" id="0" value="0" onclick="n(this.id)" class="tasto zero" />
+            <input type="submit" id="." value="." onclick="n(this.id)" class="tasto" />
+        </div>
+        <div class="section">
+            <input type="submit" id="/" value="/" onclick="n(this.id)" class="tasto" />
+            <input type="submit" value="&#8730;" onclick="radiceQuadrata()" class="tasto" />
+            <input type="submit" id="**" value="&and;" onclick="n(this.id)" class="tasto" />
+            <input type="submit" value="C" onclick="cancella()" class="tasto" />
+        </div>
+        <div class="section">
+            <button value="=" onclick="operazione()" class="uguale tasto">=</button>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
