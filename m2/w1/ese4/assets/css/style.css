@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* regole generali */
+body {
+    padding: 2em;
+}
+
+h1 {
+    text-align: center;
+    padding: 100px;
+    color: green;
+    font-size: 2.4em;
+}
+
+h3 {
+    padding: 25px 0;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+/* menu dropdown */
+.dropdown {
+    position: relative;
+}
+
+#menu {
+    width: 70px;
+    height: 70px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+#menu:hover {
+    cursor: pointer;
+}
+
+#menu:focus {
+    background-color: dodgerblue;
+}
+
+#content {
+    position: absolute;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#content a {
+    width: 200px;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    background-color: #b1a0dd;
+}
+
+#content a:hover {
+    background-color: lightgray;
+}
+
+
+/* contenuto pagina */
+.row button {
+    padding: 5px;
+   
+}
+
+.mouseOver {
+    color:red;
+}
+
+.click {
+    text-decoration: line-through;
+}
