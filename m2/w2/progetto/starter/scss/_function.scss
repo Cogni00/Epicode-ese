@@ -1,0 +1,7 @@
+@function color-txt($testo) {
+    @if (lightness($testo)> 70) {
+        @return #000;
+    }@else {
+        @return #fff;
+    }
+}
