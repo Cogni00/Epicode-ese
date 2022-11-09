@@ -1,0 +1,44 @@
+[
+    {
+        "id" : 1,
+        "verdura" : "cavolo rosso",
+        "colore" : "rosso", 
+        "famiglia" : "Brassica oloracea"
+    },
+    
+    {
+        "id" : 2, 
+        "verdura" : "zucca delica",
+        "colore" : "arancione", 
+        "famiglia" : "Cucurbitaceae"
+    },
+
+    {
+        "id" : 3, 
+        "verdura" : "cipolla rossa",
+        "colore" : "rosso", 
+        "famiglia" : "Amaryllidaceae"
+    },
+
+    {
+        "id" : 4, 
+        "verdura" : "zucchina scura", 
+        "colore" : "verde scuro", 
+        "famiglia" : "Cucurbitaceae"
+    }, 
+
+    {
+        "id" : 5, 
+        "verdura" : "bieta", 
+        "colore" : "verde", 
+        "famiglia" : "Chenopodiaceae"
+    }, 
+
+    {
+        "id" : 6, 
+        "verdura" : "pomodori pachino", 
+        "colore" : "rosso", 
+        "famiglia" : "Solanum lycopersicum"
+    }
+
+]

@@ -39,7 +39,7 @@ p {
 
 .btn {
     background-color: map-get($colors, 'viola scuro' );
-    color: color-txt(map-get($colors, 'viola scuro' ))
+    color: color-txt(map-get($colors, 'viola scuro' ));
 } 
 
 .nav-link, .bi {
