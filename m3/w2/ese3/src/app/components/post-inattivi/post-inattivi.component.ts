@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Interface } from 'src/app/models/interface';
-import { getPosts } from 'src/app/service/service.service';
+import { getPosts, updatePost } from 'src/app/service/service.service';
 
 
 @Component({
@@ -10,14 +10,18 @@ import { getPosts } from 'src/app/service/service.service';
 })
 export class PostInattiviComponent implements OnInit {
 
-    post: Interface[] = []
+    post: Interface[] = [];
 
   constructor() { }
   ngOnInit(): void {
     let cardPost = getPosts()
     this.post = cardPost
-}
 
+}
+onActivePost(id: number, i: number) {
+        updatePost({ active: true }, id);
+        this.post.splice(i, 1);
+      }
 
 
 }

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomePage } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PostAttiviComponent } from './components/post-attivi/post-attivi.component';
 import { PostInattiviComponent } from './components/post-inattivi/post-inattivi.component';
@@ -14,7 +14,7 @@ import { CardComponent } from './components/card/card.component';
 const ROUTES : Route[] = [
     {
         path: "",
-        component: HomeComponent
+        component: HomePage
     },
 
     {
@@ -32,7 +32,7 @@ const ROUTES : Route[] = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    HomePage,
     NavbarComponent,
     PostAttiviComponent,
     PostInattiviComponent,
