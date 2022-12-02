@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Interface } from 'src/app/models/interface';
-import { getPosts, updatePost, callArray, deletePost } from 'src/app/service/service.service';
+import { updatePost, getPostFiltered, deletePost } from 'src/app/service/service.service';
 
 @Component({
     selector: 'app-post-attivi',
@@ -14,19 +14,29 @@ export class PostAttiviComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        callArray()
-        let cardPost = getPosts()
-        this.post = cardPost
+        this.post = []
+        getPostFiltered(true)
+        .then((res) => {
+            this.post = res
+        })
+
     }
 
-    cancella(id :number) {
+    cancellaPost(id :number) {
         deletePost(id)
+        this.post = this.post.filter((e)=>{
+            if(e.id == id) {return false}
+            return true
+      })
     }
 
 
+    onInactivePost(a: boolean , id:number){
+        updatePost(false, id)
+        this.post = this.post.filter((e)=>{
+            if(e.id == id) {return false}
+            return true
+      })
 
-    onInactivePost(id:number,i:number){
-        updatePost({active:false},id)
-        this.post.splice(i,1)
       }
 }

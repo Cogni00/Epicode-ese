@@ -1,8 +1,8 @@
-<div class="container mt-5">
-    <div *ngFor="let p of post; let i = index">
-      <app-card *ngIf="p.active" [p]="p" >
-      <button (click)="onInactivePost(p.id,i)" class="btn btn-primary" > Disattiva </button>
-      <button (click)="cancella(p.id)" class="btn btn-danger mx-3">Cancella Post</button>
+<div *ngFor="let p of post" class="container mt-5">
+    <div>
+      <app-card [p]="p" >
+      <button (click)="onInactivePost(false,p.id)" class="btn btn-primary" > Disattiva </button>
+      <button (click)="cancellaPost(p.id)" class="btn btn-danger mx-3">Cancella Post</button>
       </app-card>
     </div>
   </div>

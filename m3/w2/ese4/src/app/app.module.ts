@@ -9,6 +9,10 @@ import { PostAttiviComponent } from './components/post-attivi/post-attivi.compon
 import { PostInattiviComponent } from './components/post-inattivi/post-inattivi.component';
 import { Route, RouterModule } from '@angular/router';
 import { CardComponent } from './components/card/card.component';
+import { ToUpperCasePipe } from './pipe/to-upper-case.pipe';
+import { SfondoDirective } from './directives/sfondo.directive';
+import { UsersComponent } from './components/users/users.component';
+import { DettaglioUsersComponent } from './components/dettaglio-users/dettaglio-users.component';
 
 
 const ROUTES : Route[] = [
@@ -26,6 +30,16 @@ const ROUTES : Route[] = [
         path: "PostInattivi",
         component: PostInattiviComponent
     },
+    {
+        path: "Users",
+        component: UsersComponent,
+           children: [
+            {
+                path: ":id",
+                component: DettaglioUsersComponent
+            }
+           ]
+    }
 
 ]
 
@@ -36,7 +50,11 @@ const ROUTES : Route[] = [
     NavbarComponent,
     PostAttiviComponent,
     PostInattiviComponent,
-    CardComponent
+    CardComponent,
+    ToUpperCasePipe,
+    SfondoDirective,
+    UsersComponent,
+    DettaglioUsersComponent
   ],
   imports: [
     BrowserModule,
