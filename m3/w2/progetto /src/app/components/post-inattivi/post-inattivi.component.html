@@ -1,0 +1,8 @@
+<div *ngFor="let p of post" class="container mt-5">
+    <div>
+      <app-card  [p]="p" >
+      <button (click)="onActivePost(true, p.id)" class="btn btn-primary" >Attiva </button>
+      <button (click)="cancellaPost(p.id)" class="btn btn-danger mx-3">Cancella Post</button>
+      </app-card>
+    </div>
+  </div>

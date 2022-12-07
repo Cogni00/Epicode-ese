@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PhotoService } from './photo.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ese1';
+  title = 'd1';
+
+  constructor(private ps: PhotoService ){}
+
+  ngOnInit(){
+    this.ps.fetchData()
+  }
+
+
 }

@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, tap } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { catchError, ReplaySubject, Subject, tap } from 'rxjs';
 import { Photo } from './photo';
 
 @Injectable({
@@ -8,13 +8,60 @@ import { Photo } from './photo';
 })
 export class PhotoService {
 
+  photos:Photo[] = []
+
+  // dataSubj = new Subject<boolean>() //emette i next()
+  dataSubj = new ReplaySubject<boolean>() //emette i next(), quando viene fatto il subscribe viene letto l'ultimo valore inviato (quindi i component quando fanno il subscribe leggeranno i dati anche se il next lo avevamo inviato nella pagina precedente)
+  dataObs = this.dataSubj.asObservable() //può essere ascoltato per i next
+
   constructor(private http:HttpClient) { }
 
-  getData() {
-    this.http.get<Photo[]>("http://localhost:3000/photos").pipe ( catchError((err) => {
-      throw new Error (" Lettura Get fallita ")
-    }))
+  getDataObs() {
+    return this.dataObs
   }
-}
 
-// minuto 23.34
+  getData() {
+    return this.http.get<Photo[]>("http://localhost:3000/photos").pipe(catchError((err) => {
+      this.dataSubj.next(false)
+      throw new Error("Lettura GET fallita")
+    }));
+  }
+
+  getPhotos() {
+    return this.photos
+  }
+
+  fetchData() {
+    // fetch("http://localhost:3000/photos%22).then(res=%3Eres.json()).then(res=%3E%7B
+    //   this.photos = res
+    // })
+    this.getData().subscribe((res)=>{
+      this.photos = res
+      this.dataSubj.next(true);
+    })
+  }
+
+
+  delete(id:number) {
+    console.log("ELIMINA", id);
+
+    this.http.delete("http://localhost:3000/photos/"+id).pipe(catchError(err => {
+      this.dataSubj.next(false);
+      throw new Error("Eliminazione fallita")
+    })).subscribe(res=>{
+      this.photos = this.photos.filter(p=>p.id!=id)
+      this.dataSubj.next(true)
+    })
+  }
+
+  likeS = new Subject<boolean>()
+  //next è un metodo che riceve un parametro basta che sia specificata nella subject
+  like(x:boolean){
+    this.likeS.next(x)
+  }
+
+  getLikeO(){
+    return this.likeS.asObservable()
+  }
+
+}

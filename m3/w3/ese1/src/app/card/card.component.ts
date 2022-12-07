@@ -1,5 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Photo } from '../photo';
+import { PhotoService } from '../photo.service';
+
+
 
 @Component({
   selector: 'app-card',
@@ -8,13 +11,30 @@ import { Photo } from '../photo';
 })
 export class CardComponent implements OnInit {
 
-  @Input() photo: Photo|undefined
+  @Input() photo:Photo|undefined
 
-  constructor() { }
+  @Input() error=false
+
+  constructor(private ps: PhotoService ) { }
 
   ngOnInit(): void {
   }
 
-  elimina(){}
+  elimina() {
+    if(this.photo != undefined) {
+      this.ps.delete(this.photo.id)
+    } else {
+      console.log("else");
+    }
+  }
+
+
+    like(){
+      this.liked= !this.liked
+      this.ps.like(this.liked)
+    }
+
+    liked= false
 
 }
+
