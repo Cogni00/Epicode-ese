@@ -1,0 +1,32 @@
+.navbar,
+.navbar-collapse {
+  flex-direction: column;
+  width: 17%;
+  height: 100vh;
+  line-height: 2em;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.navbar-expand-lg,
+ .navbar-nav {
+  flex-direction: column;
+}
+.navbar .container-fluid,
+.navbar-expand-lg,
+ .navbar-collapse,
+.navbar-expand-lg,
+ .navbar-nav {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar-brand {
+  margin-left: 0.5em;
+  padding-bottom: 0;
+  border-bottom: 4px solid #464646;
+}
+.navbar {
+  align-items: flex-start;
+}
+

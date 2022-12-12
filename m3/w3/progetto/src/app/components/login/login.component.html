@@ -1,0 +1,18 @@
+<div class="bg-danger p-5">
+<div class="container w-25 my-5 border p-3 bg-dark ">
+  <form (ngSubmit)="login(l)" #l="ngForm">
+    <div class="m-3">
+      <label for="email" class="form-label text-light">Email</label>
+      <input type="email" class="form-control" id="email" ngModel name="email" #email="ngModel" required>
+      <div *ngIf="email.touched && email.invalid">Devi compilare tutti i campi!</div>
+    </div>
+    <div class=" m-3">
+      <label for="password" class="form-label text-light">Password</label>
+      <input type="password" class="form-control" id="password" ngModel name="password" #password="ngModel" required>
+      <div *ngIf="password.touched && email.invalid">Devi compilare tutti i campi!</div>
+    </div>
+    <button type="submit" class="btn btn-danger m-3" [routerLink]="['/home']" routerLinkActive="active">Accedi!</button>
+  </form>
+  <p class="m-3 text-light">Non sei ancora registrato? <a [routerLink]="['/register']" routerLinkActive="active" >Clicca qui!</a></p>
+</div>
+</div>

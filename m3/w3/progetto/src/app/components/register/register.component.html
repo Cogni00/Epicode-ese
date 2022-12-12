@@ -1,0 +1,24 @@
+<div class="bg-danger p-5">
+<div class="container w-25 p-2 bg-dark ">
+  <form (ngSubmit)="register(f)" #f="ngForm">
+   <div class=" m-3">
+      <label for="nome" class="form-label text-light">Nome</label>
+      <input type="text" class="form-control" id="nome" ngModel name="nome" #nome="ngModel" required>
+      <div *ngIf="nome.touched && nome.invalid">Devi compilare tutti i campi!</div>
+    </div>
+    <div class=" m-3">
+      <label for="email" class="form-label text-light">Email</label>
+      <input type="email" class="form-control" id="email" ngModel name="email" #email="ngModel" required>
+      <div *ngIf="email.touched && email.invalid">Devi compilare tutti i campi!</div>
+    </div>
+    <div class="m-3">
+      <label for="password" class="form-label text-light">Password</label>
+      <input type="password" class="form-control" id="password" ngModel name="password" #password="ngModel" required>
+      <div *ngIf="password.touched && email.invalid">Devi compilare tutti i campi!</div>
+    </div>
+    <button (ngClass)="{'disabled':f.invalid}" type="submit" class="btn btn-danger m-3">Registrati!</button>
+  </form>
+
+  <h1 *ngIf="err"> ERRORE: {{err}} </h1>
+</div>
+</div>

@@ -1,6 +1,7 @@
 {
   "photos": [
     {
+      "users": [],
       "albumId": 1,
       "id": 2,
       "title": "reprehenderit est deserunt velit ipsam",
@@ -8,6 +9,7 @@
       "thumbnailUrl": "https://via.placeholder.com/150/771796"
     },
     {
+      "users": [],
       "albumId": 1,
       "id": 3,
       "title": "officia porro iure quia iusto qui ipsa ut modi",
@@ -15,6 +17,7 @@
       "thumbnailUrl": "https://via.placeholder.com/150/24f355"
     },
     {
+      "users": [],
       "albumId": 1,
       "id": 4,
       "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
@@ -22,6 +25,7 @@
       "thumbnailUrl": "https://via.placeholder.com/150/d32776"
     },
     {
+      "users": [],
       "albumId": 1,
       "id": 5,
       "title": "natus nisi omnis corporis facere molestiae rerum in",
@@ -29,6 +33,7 @@
       "thumbnailUrl": "https://via.placeholder.com/150/f66b97"
     },
     {
+      "users": [],
       "albumId": 1,
       "id": 6,
       "title": "accusamus ea aliquid et amet sequi nemo",
@@ -36,6 +41,7 @@
       "thumbnailUrl": "https://via.placeholder.com/150/56a8c2"
     },
     {
+      "users": [],
       "albumId": 1,
       "id": 7,
       "title": "officia delectus consequatur vero aut veniam explicabo molestias",
@@ -43,6 +49,7 @@
       "thumbnailUrl": "https://via.placeholder.com/150/b0f7cc"
     },
     {
+      "users": [],
       "albumId": 1,
       "id": 8,
       "title": "aut porro officiis laborum odit ea laudantium corporis",
@@ -50,6 +57,7 @@
       "thumbnailUrl": "https://via.placeholder.com/150/54176f"
     },
     {
+      "users": [],
       "albumId": 1,
       "id": 9,
       "title": "qui eius qui autem sed",
@@ -57,6 +65,7 @@
       "thumbnailUrl": "https://via.placeholder.com/150/51aa97"
     },
     {
+      "users": [],
       "albumId": 1,
       "id": 10,
       "title": "beatae et provident et ut vel",

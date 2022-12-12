@@ -1,0 +1,12 @@
+<form #f="ngForm"  (ngSubmit)="register(f)">
+  Email: <input type="text" required ngModel name="email" #email="ngModel">
+  <div *ngIf="email.touched && email.invalid">Richiesto</div>
+  <br>
+  Password: <input type="password" required ngModel name="password" #password="ngModel">
+  <div *ngIf="password.touched && password.invalid">Richiesto</div>
+  <br>
+  Nome: <input type="text" required ngModel name="nome" #nome="ngModel">
+  <div *ngIf="nome.touched && nome.invalid">Richiesto</div>
+
+  <button type="subtmit"> REGISTRATI </button>
+</form>

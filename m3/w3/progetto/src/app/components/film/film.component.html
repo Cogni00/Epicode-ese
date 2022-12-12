@@ -1,0 +1,7 @@
+<div id="movie" class="d-flex justify-content-between flex-wrap bg-dark p-5">
+<div *ngFor="let m of movie" class="card m-1" style="width: 18rem;">
+  <img src="http://image.tmdb.org/t/p/w500/{{m.poster_path}}"  class="card-img-top" alt="...">
+  <div class="card-body bg-dark">
+    <h3 class="card-title text-light text-center">{{m.title}}</h3>
+  </div>
+</div>
